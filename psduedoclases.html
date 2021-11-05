@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //cunstrocotr para instituto
+    function Grupo(desc, numAlumnos) {
+        this.desc = desc
+        this.numAlumnos = numAlumnos
+    }
+
+    //cunstrocotr para instituto
+
+    function Instituto(codigo, nombre, grupos) {
+        this.codigo = codigo
+        this.nombre = nombre
+        this.grupos = grupos
+        // metodo que devlueve el codigo del instituo
+        this.getCodigo = function () {
+            return this.codigo
+        }
+
+        this.totalAlumnos = function () {
+            let totalAlum = 0
+
+            for (let i in this.grupos) {
+                totalAlum += this.grupos[i].numAlumnos
+            }
+            return totalAlum
+        }
+
+        this.nuevoGrupo = function (nombre, num) {
+            this.grupos.push(new Grupo(nombre, num))
+        }
+    }
+
+    //objeto de Instituo
+
+    let Myinstituo = new Instituto(10, "nomnom", [new Grupo("daw1", 14), new Grupo("daw2", 2)])
+
+    // console.log(Myinstituo.getCodigo());
+    //console.log(Myinstituo.totalAlumnos());
+
+    Myinstituo.nuevoGrupo("wow", 69)
+
+    console.log(Myinstituo);
+</script>
+
+</html>
