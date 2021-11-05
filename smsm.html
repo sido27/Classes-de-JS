@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="div1" style="text-align: center">abandonar</div>
+
+    <div id="div2" style="text-align: center">rbndonaaa</div>
+</body>
+<script>
+
+    // str1 =>  abandonar
+    // str2 =>  rbndonaaa
+    // str1[i] == str2[j]
+    let str1 = document.getElementById("div1").innerHTML
+    let str2 = document.getElementById("div2").innerHTML
+
+    let z = 0
+    function contiene(str1, str2) {
+        for (i in str1) {
+            console.log(str1[i]);
+        }
+
+
+    }
+
+    console.log(contiene(str1, str2));
+    //contiene(str1, str2)
+
+</script>
+
+</html>
