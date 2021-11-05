@@ -25,11 +25,15 @@
         this.nombre = nombre
         this.grupos = grupos
         // metodo que devlueve el codigo del instituo
+
+        // this.getCodigo = function () {
+        //     return this.codigo
+        // }
     } Instituto.prototype.getCodigo = function () {
         return this.codigo
     }
 
-    this.totalAlumnos = function () {
+    Instituto.prototype.totalAlumnos = function () {
         let totalAlum = 0
 
         for (let i in this.grupos) {
@@ -38,10 +42,10 @@
         return totalAlum
     }
 
-    this.nuevoGrupo = function (nombre, num) {
+    Instituto.prototype.nuevoGrupo = function (nombre, num) {
         this.grupos.push(new Grupo(nombre, num))
     }
-    }
+
 
     //objeto de Instituo
 
